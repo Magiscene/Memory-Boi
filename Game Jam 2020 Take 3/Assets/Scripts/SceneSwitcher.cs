@@ -14,7 +14,7 @@ public class SceneSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        /*if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             SceneManager.LoadScene(0);
         }
@@ -22,6 +22,11 @@ public class SceneSwitcher : MonoBehaviour
         {
            // SceneManager.LoadScene(1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //This will get you the next scene
-        }
+        }*/
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        SceneManager.LoadScene(1);
     }
 }
